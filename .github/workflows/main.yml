@@ -4,11 +4,17 @@
 
 ##################################################
 
+
+
 ---
 
 name: Mr Coxall's Super Linter
 
+
+
 on: [push, pull_request]
+
+
 
 jobs:
 
@@ -17,7 +23,9 @@ jobs:
     name: Mr Coxall's Super Linter
 
     runs-on: ubuntu-latest
-    
+
+
+
     steps:
 
       - name: Check out Git repository
@@ -39,6 +47,7 @@ jobs:
           prettier_options: --write **/*.{html,css,js,ts,jsx,tsx,json}
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
       - name: Run GitHub Super Linter
